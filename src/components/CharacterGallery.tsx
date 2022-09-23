@@ -15,7 +15,7 @@ const  filterCharacters = props.characters.filter( (char) => char.name.toLowerCa
 
 
     return (
-        <section>
+        <section className={"item-center"}>
             <input onChange={(event) => setFilterText(event.target.value)} />
             <p>Typed in: {filterText}</p>
 

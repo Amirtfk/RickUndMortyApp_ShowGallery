@@ -1,4 +1,5 @@
-import React from 'react';
+import axios from 'axios';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import CharacterGallery from "./components/CharacterGallery";
 
@@ -6,8 +7,9 @@ import CharacterGallery from "./components/CharacterGallery";
 
 
 function App() {
+    // Hier können wir die API Liste löschen und dann direkt mit Axios arbeiten
 
-    const characters = [
+   /*const characters = [
         {
             "id": 1,
             "name": "Rick Sanchez",
@@ -1132,13 +1134,40 @@ function App() {
             "url": "https://rickandmortyapi.com/api/character/40",
             "created": "2017-11-05T10:02:26.701Z"
         }
-    ]
+    ]*/
+
+
+    // Um mit Axios zu arbeiten, vergiss es nicht, um Axios erstmal zu installieren > im Terminal gib ein: npm install und nach dem Install > npm axios install
+    const [characters, setCharacters] = useState([]);
+
+    useEffect(() => {
+        axios.get("https://rickandmortyapi.com/api/character")
+            .then((response) => {
+                return response.data
+            })
+            .then((data) => {
+                setCharacters(data.results)
+            })
+            .catch((error) => {
+                console.error(error)
+            })
+
+    }, [])
+
+        useEffect(() => {
+        console.log("I was called!!!")
+        })
+
 
     return (
+
         <header>
 
             <CharacterGallery characters = {characters} />
         </header>
+
+
+
     );
 }
 

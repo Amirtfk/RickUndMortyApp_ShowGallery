@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.item-center {
+  text-align: center;
+}
+
+.item-center > input {
+  margin-top: 35px;
+}
+
+input {
+  padding: 8px;
+  width: 18%;
+  border-color: #747474;
+  border-radius: 8px;
+  border-width: 1px;
+}
