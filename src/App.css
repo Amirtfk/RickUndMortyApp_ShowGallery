@@ -52,3 +52,11 @@ input {
   border-radius: 8px;
   border-width: 1px;
 }
+
+.card {
+  background-color: #8cdbb0;
+}
+
+.card h3 {
+  color: #18493b;
+}
