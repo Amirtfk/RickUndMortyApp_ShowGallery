@@ -60,3 +60,9 @@ input {
 .card h3 {
   color: #18493b;
 }
+
+.card img {
+  border: solid 1px #747474;
+  border-left: none;
+  border-right: none;
+}
