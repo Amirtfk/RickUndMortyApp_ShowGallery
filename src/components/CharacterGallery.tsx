@@ -16,7 +16,7 @@ const  filterCharacters = props.characters.filter( (char) => char.name.toLowerCa
 
     return (
         <section className={"item-center"}>
-            <input onChange={(event) => setFilterText(event.target.value)} />
+            <input  placeholder="Rick and Morty Characters ... " onChange={(event) => setFilterText(event.target.value)} />
             <p>Typed in: {filterText}</p>
 
             <div className = {"cards"}>

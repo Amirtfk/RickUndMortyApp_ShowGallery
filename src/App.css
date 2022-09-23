@@ -52,6 +52,14 @@ input {
   border-radius: 8px;
   border-width: 1px;
 }
+input, textarea {
+  background-color: #cad9d1;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gray;
+  opacity: 1; /* Firefox */
+}
 
 .card {
   background-color: #8cdbb0;
