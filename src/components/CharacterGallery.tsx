@@ -1,5 +1,5 @@
 import {Character} from "../model/Character";
-import {CharacterCard} from "./CharacterCard";
+import CharacterCard from "./CharacterCard";
 import "./CharacterGallery.css"
 import {useState} from "react";
 

@@ -2,13 +2,16 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import CharacterGallery from "./components/CharacterGallery";
+import {HashRouter, Route, Routes} from "react-router-dom";
+import CharacterDetailsPage from "./Pages/CharacterDetailsPage";
 
 
 
 
 function App() {
-    // Hier können wir die API Liste löschen und dann direkt mit Axios arbeiten
 
+    
+    // Hier können wir die API Liste löschen und dann direkt mit Axios arbeiten
    /*const characters = [
         {
             "id": 1,
@@ -1137,7 +1140,8 @@ function App() {
     ]*/
 
 
-    // Um mit Axios zu arbeiten, vergiss es nicht, um Axios erstmal zu installieren > im Terminal gib ein: npm install und nach dem Install > npm axios install
+    // Um mit Axios zu arbeiten, vergiss es nicht, um Axios erstmal zu installieren >
+    // im Terminal gib ein: npm install und nach dem Install > npm install axios
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
@@ -1160,14 +1164,14 @@ function App() {
 
 
     return (
-
-        <header>
-
-            <CharacterGallery characters = {characters} />
-        </header>
-
-
-
+        <div>
+            <HashRouter>
+                <Routes>
+                    <Route path={"/"} element={<CharacterGallery characters={characters} />} />
+                    <Route path={"/character/:id"} element={<CharacterDetailsPage characters={characters} />} />
+                </Routes>
+            </HashRouter>
+        </div>
     );
 }
 
