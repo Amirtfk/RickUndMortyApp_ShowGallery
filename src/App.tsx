@@ -7,7 +7,6 @@ import CharacterDetailsPage from "./Pages/CharacterDetailsPage";
 
 
 
-
 function App() {
 
     
